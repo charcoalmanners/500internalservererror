@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>500 Internal Server Error</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<!--disintegration-->
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+		<defs>
+			<!-- 
+            Define 'dissolve-filter' to create the dissolve effect.
+            Enlarged filter area to prevent clipping.
+          -->
+			<filter id="dissolve-filter" x="-200%" y="-200%" width="500%" height="500%"
+				color-interpolation-filters="sRGB" overflow="visible">
+
+				<!-- Generate large-scale fractal noise -->
+				<feTurbulence id="dissolve-filter-turbulence" type="fractalNoise" baseFrequency="0.004" numOctaves="1"
+					result="bigNoise" />
+
+				<!-- Enhance noise contrast -->
+				<feComponentTransfer in="bigNoise" result="bigNoiseAdjusted">
+					<feFuncR type="linear" slope="3" intercept="-1" />
+					<feFuncG type="linear" slope="3" intercept="-1" />
+				</feComponentTransfer>
+
+				<!-- Generate fine-grained fractal noise -->
+				<feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="1" result="fineNoise" />
+
+				<!-- Merge the adjusted big noise and fine noise -->
+				<feMerge result="mergedNoise">
+					<feMergeNode in="bigNoiseAdjusted" />
+					<feMergeNode in="fineNoise" />
+				</feMerge>
+
+				<!-- Apply displacement map to distort the image -->
+				<feDisplacementMap id="dissolve-filter-displacement" in="SourceGraphic" in2="mergedNoise" scale="0"
+					xChannelSelector="R" yChannelSelector="G" />
+			</filter>
+		</defs>
+	</svg>
+	<div>
+		<!-- Sidebar -->
+		<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px"
+			id="mySidebar">
+			<a href="javascript:void(0)" onclick="w3_close()" class="container w3-display-topright">
+				<div class="close"></div>
+			</a>
+			<div class="w3-bar-block w3-center">
+				<a href="home.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Home</a>
+				<a href="home.html#People" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+					onclick="w3_close()">Meet
+					the
+					Avengers!</a>
+				<a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Infinity Stones</a>
+				<a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+			</div>
+		</nav>
+
+		<!-- !PAGE CONTENT! -->
+		<div class="w3-content" style="max-width:1500px">
+
+			<!-- Header -->
+			<div style="background-color: #d3d3d3;">
+				<a href="#" class="container w3-display-topright" onclick="w3_open()">
+					<div class="open"></div>
+					<div class="open"></div>
+					<div class="open"></div>
+				</a>
+				<div class="w3-clear"></div>
+				<!-- Actual content STARTS HERE!!!-->
+				<header class="w3-center w3-margin-bottom">
+					<br><br><br>
+					<h1><b>500 Internal Server Error</b></h1>
+					<br><br><br>
+					<button id="button" class="button iaminev" onclick="deleteElement('document')">I
+						am inevitable</button>
+					<br><br><br>
+				</header>
+			</div>
+		</div>
+		<div class="container">
+			<br><br><br><br>
+			<div id="People">
+				<h3>Meet The Avengers!</h3><br><br><br>
+
+				<table>
+					<tr>
+						<td></td>
+						<td></td>
+						<td colspan="2">
+							<div class="static"><img src="arup.jpg" class="pfp" style="width:65%;">
+								<div class="jobdesc">iron man</div>
+							</div>
+			</div>
+			</td>
+			<td></td>
+			<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td colspan="2" style="padding-bottom: 10%;">sir arup!</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="height: 50%">
+					<div class="static"><img src="gab.jpg" class="pfp">
+						<div class="jobdesc">created the poster!</div>
+					</div>
+				</td>
+				<td colspan="2">
+					<div class="static"><img src="gab.jpg" class="pfp" style="width:65%;">
+						<div class="jobdesc">big boss!</div>
+					</div>
+				</td>
+				<td colspan="2">
+					<div class="static"><img src="char.jpg" class="pfp">
+						<div class="jobdesc">created the website!</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">gab!</td>
+				<td colspan="2">marci!</td>
+				<td colspan="2">char!</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2">
+					<div class="static"><img src="gab.jpg" class="pfp">
+						<div class="jobdesc">created the website!</div>
+					</div>
+				</td>
+				<td colspan=2">
+					<div class="static"><img src="gab.jpg" class="pfp">
+						<div class="jobdesc">created the animation!</div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2">kathy!</td>
+				<td colspan="2">josh!</td>
+				<td></td>
+			</tr>
+			</table>
+		</div>
+	</div>
+	<!-- End Page Content -->
+
+	<!-- Footer -->
+	<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge"
+		style="margin-top:128px; width: 100%;">
+		<p>Thank you for viewing our site!</p>
+	</footer>
+
+
+	<script src="script.js">
+	</script>
+</body>
+
+</html>
