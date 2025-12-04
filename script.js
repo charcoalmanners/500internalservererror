@@ -6,7 +6,10 @@
 		function w3_close() {
 			document.getElementById("mySidebar").style.display = "none";
 		}
-
+function show(){
+                setTimeout(() => {
+    document.getElementById("video").style.display="block";			}, 1000);
+}
 
 //disintegration for homepage
 const setRandomSeed = () => {
@@ -56,7 +59,6 @@ const setRandomSeed = () => {
 
 		const deleteElement = (element) => {
             setTimeout(() => {
-				document.getElementById("video").style.display="inline";
                 setTimeout(() => {if (element === 'document') {
 				element = window.document.documentElement;
 			}
