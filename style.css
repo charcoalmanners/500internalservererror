@@ -1,12 +1,22 @@
-body,
-		h1, h2, h3, h4, h5, h6, p {
+body, h1, h2, h3, h4, h5, h6, p {
 			font-family: "Space Mono", monospace;
+            color:#fff
 		}
 
-p {
-			font-family: "Space Mono", monospace;
-			font-size: 0.3 em;
+p, button {
+			font-size: 2vw;
+            margin: 1% 0%;
 		}
+
+h1 {
+			font-size: 5.5vw;
+text-align: center;
+color: #000000;
+}
+
+h2 {
+			font-size: 5.25vw;
+}
 
 table {
 			width: 90%;
@@ -51,7 +61,6 @@ border-radius: 100px;
 }
 td {
 			padding: 1% 0.5%;
-			margin: 0.5%;
 			height: 100%;
 			text-overflow: ellipsis;
 			overflow-y: hidden;
@@ -59,17 +68,26 @@ td {
 			text-align: center;
 		}
 .button {
+    margin: 0% 20%;
             border:none;
             display:inline-block;
-            padding:8px 16px;
+            padding:2.5%;
             vertical-align:middle;
             overflow:hidden;
             text-decoration:none;
             text-align:center;
             background-color: none;
+            -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
             }
 
-        
+.video {
+top: 50%;
+transform: translateY(-50%);
+display:none;
+}
+
 .iaminev {
             color:white;
             background-color:black;
@@ -104,7 +122,7 @@ td {
 			transform: translate(-50%, -50%);
 			opacity: 0;
 			transition: transform .2s;
-			font-size: 0.65em;
+			font-size: 2vw;
 		}
 
 		.static:hover .jobdesc {
@@ -158,3 +176,113 @@ td {
 		#delete-image:active {
 			transform: translate(-50%, -50%) scale(0.9);
 		}
+
+        		.gallery-section {
+            background: linear-gradient(180deg, #808080 0%, #2d7a8f 100%);
+            padding: 60px 20px;
+            min-height: 80vh;
+        }
+        
+
+
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-items: center;
+        }
+
+        .gallery .character-card:last-child {
+            grid-column: span 2;
+        }
+        
+        .character-card {
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .circle-container {
+            width: 240px;
+            height: 240px;
+            margin: 0 auto 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .character-card:hover .planet {
+            box-shadow: 0 0 60px rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+        
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .character-id {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            font-size: 0.9em;
+            letter-spacing: 2px;
+        }
+        
+        .character-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .character-description {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .unlock {
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.6);
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .circle-container {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        
+        
