@@ -55,11 +55,15 @@ const setRandomSeed = () => {
 
 
 		const deleteElement = (element) => {
-			if (element === 'document') {
+            setTimeout(() => {
+				document.getElementById("video").style.display="block";
+                setTimeout(() => {if (element === 'document') {
 				element = window.document.documentElement;
 			}
-			useThanosSnap(element);
+			useThanosSnap(element);}, 1900);
 			setTimeout(() => {
 				location.reload();
-			}, 2500);
+			}, 3000);
+			}, 1000);
+			
 		}
