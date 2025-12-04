@@ -56,7 +56,7 @@ const setRandomSeed = () => {
 
 		const deleteElement = (element) => {
             setTimeout(() => {
-				document.getElementById("video").style.display="block";
+				document.getElementById("video").style.display="inline";
                 setTimeout(() => {if (element === 'document') {
 				element = window.document.documentElement;
 			}
