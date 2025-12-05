@@ -186,10 +186,16 @@ visibility: hidden;
 
 
 
+		.gallery-section {
+            background: linear-gradient(180deg, #808080 0%, #2d7a8f 100%);
+            padding: 10% 5%;
+            min-height: 80vh;
+        }
+        
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
+            gap:5%;
             max-width: 1200px;
             margin: 0 auto;
             justify-items: center;
@@ -212,8 +218,8 @@ visibility: hidden;
         }
         
         .circle-container {
-            width: 240px;
-            height: 240px;
+            width: 60%;
+            height: 60%;
             margin: 0 auto 20px;
             position: relative;
             cursor: pointer;
@@ -284,5 +290,3 @@ visibility: hidden;
                 height: 200px;
             }
         }
-        
-        
